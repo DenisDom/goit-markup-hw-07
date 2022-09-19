@@ -51,8 +51,12 @@
     &:focus {
     color: var(--accent-color);
     }
+}
 
-    .nav-list__link_current::after {
+.nav-list__link_current {
+    color: var(--accent-color);
+
+    &::after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -66,10 +70,6 @@
     }
 }
 
-.nav-list__link_current {
-    color: var(--accent-color);
-}
-
 .contacts-list {
     display: flex;
     align-items: center;
@@ -78,7 +78,6 @@
     padding-top: 32px;
     padding-bottom: 32px;
 }
-
 
 .contacts-list__link {
     display: flex;
