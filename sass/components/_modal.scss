@@ -20,16 +20,17 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: scale(0);
+    transform: translate(-50%, -50%) scale(0);
     width: 528px;
     padding: 40px;
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    .backdrop.is-hidden & {
+}
+
+.backdrop-is-hidden {
     transform: translate(-50%, -50%) scale(1);
-    }
 }
 
 
@@ -50,8 +51,8 @@
 
     &:hover,
     &:focus {
-    fill: var(--accent-color);
-    cursor: pointer;
+        fill: var(--accent-color);
+        cursor: pointer;
     }
 }
 
@@ -97,8 +98,8 @@
     transition: border-color var(--css-transition);
 
     &:focus {
-    outline: none;
-    border-color: var(--accent-color);
+        outline: none;
+        border-color: var(--accent-color);
     }
 }
 
@@ -109,8 +110,8 @@
     transform: translateY(-50%);
     transition: fill var(--css-transition);
 
-    .modal-form-input:focus + & {
-    fill: var(--accent-color);
+    .modal-form-input:focus+& {
+        fill: var(--accent-color);
     }
 }
 
@@ -129,14 +130,14 @@
     display: block;
 
     &:focus {
-    outline: none;
-    border-color: var(--accent-color);
+        outline: none;
+        border-color: var(--accent-color);
     }
 
     &::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    fill: rgba(117, 117, 117, 0.5);
+        font-size: 12px;
+        line-height: 1.17;
+        fill: rgba(117, 117, 117, 0.5);
     }
 }
 
@@ -159,23 +160,23 @@
     background-image: url(../images/black-checkbox.svg);
     margin-right: 10px;
 
-    .modal-form-check:checked + & {
-    border-color: var(--accent-color);
+    .modal-form-check:checked+& {
+        border-color: var(--accent-color);
     }
 
-    .modal-form-check:focus + & {
-    box-shadow: 0 0 0 2px var(--accent-color);
-    border: none;
+    .modal-form-check:focus+& {
+        box-shadow: 0 0 0 2px var(--accent-color);
+        border: none;
     }
 }
 
 .modal-form-active-check-icon {
     display: none;
 
-    .modal-form-check:checked + .modal-form-active-check & {
-    display: block;
-    fill: var(--accent-color);
-    border: none;
+    .modal-form-check:checked+.modal-form-active-check & {
+        display: block;
+        fill: var(--accent-color);
+        border: none;
     }
 }
 
@@ -217,8 +218,7 @@
 
     &:hover,
     &:focus {
-    color: var(--white-color);
-    background-color: var(--btn-hero-focus);
+        color: var(--white-color);
+        background-color: var(--btn-hero-focus);
     }
 }
-
